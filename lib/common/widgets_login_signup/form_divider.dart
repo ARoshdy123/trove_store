@@ -1,10 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:trove_store/utils/constants/colors.dart';
 import 'package:trove_store/utils/helpers/helper_functions.dart';
 
-import '../../utils/constants/text_strings.dart';
 
 class KFormDivider extends StatelessWidget {
   const KFormDivider({
