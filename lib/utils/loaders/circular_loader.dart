@@ -8,7 +8,7 @@ class TCircularLoader extends StatelessWidget {
   /// Default constructor for the TCircularLoader.
   ///
   /// Parameters:
-  ///   - foregroundColor: The color of the circular loader.dsadsa
+  ///   - foregroundColor: The color of the circular loader.
   ///   - backgroundColor: The background color of the circular loader.
   const TCircularLoader({
     super.key,
