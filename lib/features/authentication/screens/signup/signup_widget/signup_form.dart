@@ -63,10 +63,12 @@ class SignUpForm extends StatelessWidget {
           ),
 
           /// PhoneNumber
-          const TFormField(
-              fontSize: TSizes.fontSizeSm,
-              prefixIcon: Icon(Iconsax.call),
-              labelText: TTexts.phoneNo),
+          TFormField(
+            fontSize: TSizes.fontSizeSm,
+            prefixIcon: const Icon(Iconsax.call),
+            labelText: TTexts.phoneNo,
+            keyboardType: TextInputType.phone,
+          ),
           const SizedBox(
             height: TSizes.spaceBtwInputFields,
           ),

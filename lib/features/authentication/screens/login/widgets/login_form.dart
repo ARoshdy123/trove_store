@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:trove_store/features/authentication/screens/forgetpassword/forget_password.dart';
 import 'package:trove_store/features/authentication/screens/signup/signup.dart';
+import 'package:trove_store/navigation_menu.dart';
 import 'package:trove_store/utils/constants/sizes.dart';
 import 'package:trove_store/utils/constants/text_strings.dart';
 
@@ -51,7 +53,7 @@ class KloginForm extends StatelessWidget {
 
                 ///forget password
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const ForgetPassword()),
                     child:  const Text(TTexts.forgetPassword))
               ],
             ),
@@ -61,7 +63,7 @@ class KloginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const NavigationMenu()),
                     child: const Text(TTexts.signIn))),
             const SizedBox(height: TSizes.spaceBtwItems),
 

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:trove_store/common/success_screen/success_screen.dart';
 import 'package:trove_store/features/authentication/screens/login/login.dart';
 import 'package:trove_store/utils/constants/image_strings.dart';
 import 'package:trove_store/utils/constants/sizes.dart';
 import 'package:trove_store/utils/constants/text_strings.dart';
 import 'package:trove_store/utils/helpers/helper_functions.dart';
 
-class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+class ResetPassword extends StatelessWidget {
+  const ResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class VerifyEmailScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            onPressed: () => Get.offAll(() => const LoginScreen()),
+            onPressed: () => Get.back(),
             icon: const Icon(
               Icons.clear,
             ),
@@ -39,11 +38,9 @@ class VerifyEmailScreen extends StatelessWidget {
               ),
 
               ///title&subtitle
-              Text(
-                TTexts.confirmEmail,
-                style: Theme.of(context).textTheme.headlineMedium,
-                textAlign: TextAlign.center,
-              ),
+              Text(TTexts.changeYourPasswordTitle,
+                  style: Theme.of(context).textTheme.headlineMedium,
+                  textAlign: TextAlign.center),
               const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
@@ -55,28 +52,19 @@ class VerifyEmailScreen extends StatelessWidget {
               const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
-              Text(
-                TTexts.confirmEmailSubTitle,
-                style: Theme.of(context).textTheme.labelMedium,
-                textAlign: TextAlign.center,
-              ),
+              Text(TTexts.changeYourPasswordSubTitle,
+                  style: Theme.of(context).textTheme.labelMedium,
+                  textAlign: TextAlign.center),
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
               ///Buttons
               SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () => Get.to(
-                          () => SuccessScreen(
-                            image: TImages.staticSuccessIllustration,
-                            title: TTexts.yourAccountCreatedTitle,
-                            subTitle: TTexts.yourAccountCreatedSubTitle,
-                            onPressed: () => Get.to(() => const LoginScreen()),
-                          ),
-                        ),
-                    child: const Text(TTexts.tContinue)),
+                width: double.infinity,
+                child: ElevatedButton(
+                    onPressed: () => Get.to(() => const LoginScreen()),
+                    child: const Text(TTexts.done)),
               ),
               const SizedBox(height: TSizes.spaceBtwItems),
               SizedBox(
